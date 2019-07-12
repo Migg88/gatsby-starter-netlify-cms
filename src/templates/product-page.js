@@ -7,6 +7,7 @@ import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+
 export const ProductPageTemplate = ({
   image,
   title,

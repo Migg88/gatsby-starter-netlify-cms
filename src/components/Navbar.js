@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import logo from '../img/capptour.webp'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -35,14 +34,14 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={logo} alt="Kaldi" style={{ width: '188px' }} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -57,36 +56,42 @@ const Navbar = class extends React.Component {
           </div>
           <div
             id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar-end ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+            <div className="navbar-start flex-vertical-align has-text-centered first-nav-links">
+              <Link className="navbar-item secondary-links column-direction has-text-white" to="/about">
+                <span className="icon is-small has-text-white">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+                Carrito
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="navbar-item secondary-links column-direction has-text-white" to="/products">
+                <span className="icon is-small has-text-white">
+                  <i class="far fa-comments"></i>
+                </span>
+                Contacto
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
+              <Link className="navbar-item secondary-links column-direction has-text-white" to="/blog">
+                <span className="icon is-small has-text-white">
+                  <i class="fas fa-users"></i>
+                </span>
+                Nosotros
               </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
+              <Link className="navbar-item secondary-links column-direction has-text-white" to="/contact">
+                <span className="icon is-small has-text-white">
+                  <i class="fab fa-facebook"></i>
+                </span>
+                Facebook
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+              <Link className="navbar-item secondary-links column-direction has-text-white" to="/contact/examples">
+                <span className="icon is-small has-text-white">
+                  <i class="fab fa-instagram"></i>
+                </span>
+                Instagram
               </Link>
             </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+            <div className="navbar-end flex-vertical-align">
+              <input className="input is-rounded" type="text" placeholder="Buscar"/>
             </div>
           </div>
         </div>
