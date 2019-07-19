@@ -20,6 +20,8 @@ export const IndexPageTemplate = ({
   divider,
   mostVisitedBack,
   tour,
+  secondTour,
+  thirdTour,
   tourTypes,
 }) => (
   <div >
@@ -70,7 +72,7 @@ export const IndexPageTemplate = ({
       <Img className="divider-top" fluid={divider.childImageSharp.fluid} />
       <div className="container">
         <h2 className="title t-yellow is-1 has-text-centered space-1">Los Más Visitados</h2>
-        <div className="bd-example">
+        <div className="most-visited-tours" style={{marginTop: '40px', marginBottom: '50px'}}>
           <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
@@ -78,24 +80,124 @@ export const IndexPageTemplate = ({
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div className="carousel-inner">
-              <div className="carousel-item active"
-
+              <div className="carousel-item tour-card active"
+                style={{
+                  backgroundImage: `url(${
+                    !!tour.childImageSharp ? tour.childImageSharp.fluid.src : tour
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
               >
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <div className="carousel-caption tour-caption d-none d-md-block">
+                  <h3 className="title is-2 t-yellow">Chichen Itza</h3>
+                  <div className="indicators">
+                    <span>
+                      <i className="fas fa-clock"></i>
+                      <p>6 horas</p>
+                    </span>
+                    <span>
+                      <i className="fas fa-utensils"></i>
+                    </span>
+                    <span>
+                      <i className="fas fa-shuttle-van"></i>
+                    </span>
+                    <span>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                    </span>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <button className="button">Ver Más</button>
+                </div>     
+              </div>
+              <div className="carousel-item tour-card"
+                style={{
+                  backgroundImage: `url(${
+                    !!secondTour.childImageSharp ? secondTour.childImageSharp.fluid.src : secondTour
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <div className="carousel-caption tour-caption d-none d-md-block">
+                  <h3 className="title is-2 t-yellow">Tour Title</h3>
+                  <div className="indicators">
+                    <span>
+                      <i className="fas fa-clock"></i>
+                      <p>6 horas</p>
+                    </span>
+                    <span>
+                      <i className="fas fa-utensils"></i>
+                    </span>
+                    <span>
+                      <i className="fas fa-shuttle-van"></i>
+                    </span>
+                    <span>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                    </span>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <button className="button">Ver Más</button>
                 </div>
               </div>
-              <div className="carousel-item">
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              <div className="carousel-item tour-card"
+                style={{
+                  backgroundImage: `url(${
+                    !!thirdTour.childImageSharp ? thirdTour.childImageSharp.fluid.src : thirdTour
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <div className="carousel-caption tour-caption d-none d-md-block is-rounded">
+                  <h3 className="title is-2 t-yellow">Tour Title</h3>
+                  <div className="indicators">
+                    <span>
+                      <i className="fas fa-clock"></i>
+                      <p>6 horas</p>
+                    </span>
+                    <span>
+                      <i className="fas fa-utensils"></i>
+                    </span>
+                    <span>
+                      <i className="fas fa-shuttle-van"></i>
+                    </span>
+                    <span>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                      <i className="far fa-star"></i>
+                    </span>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <button className="button">Ver Más</button>
                 </div>
               </div>
             </div>
@@ -113,7 +215,9 @@ export const IndexPageTemplate = ({
       <Img className="divider-bottom" fluid={divider.childImageSharp.fluid} />
     </section>
     <section>
-      <div className="container" style={{padding: '150px 0 100px 0'}}>
+
+      <div className="container" style={{padding: '150px 0 100px 0', backgroundColor: '#f1f1f1', boxShadow: '0 10px 21px rgba(0, 0, 0, 0.16)'}}>
+        <h2 className="title t-yellow is-1 has-text-centered space-1" style={{paddingBottom: '50px'}}>Nuestros Tours</h2>
         <Img style={{maxWidth: '60%', margin: '0 auto'}} fluid={tourTypes.childImageSharp.fluid} />
       </div>
     </section>
@@ -138,6 +242,8 @@ const IndexPage = ({ data }) => {
   const mvBackground = data.mvBackground
   const tour = data.tour
   const tourTypes = data.tourTypes
+  const secondTour = data.secondTour
+  const thirdTour = data.third
 
   return (
     <Layout>
@@ -152,6 +258,8 @@ const IndexPage = ({ data }) => {
         divider={divider}
         mostVisitedBack={mvBackground}
         tour={tour}
+        secondTour={secondTour}
+        thirdTour={thirdTour}
         tourTypes={tourTypes}
       />
     </Layout>
@@ -178,6 +286,20 @@ export const pageQuery = graphql`
       }
     }
     tour: file(relativePath: { eq: "tour.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    secondTour: file(relativePath: { eq: "cenote.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    third: file(relativePath: { eq: "buceo.jpg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid

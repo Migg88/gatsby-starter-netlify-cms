@@ -74,8 +74,26 @@ $capptour-yellow: #f1df0d
 //tour-card
 .tour-card
   position: relative
-  border-radius: 15px
-  max-height: 400px
+  border-radius: 1rem
+  height: 400px
+
+  .tour-caption
+    background-color: rgba(0,0,0,.6)
+    border-radius: 3rem 3rem 4px 4px
+
+    button
+      width: 100%
+      margin-top: 20px
+      margin-bottom: -20px
+      background-color: $capptour-yellow
+      color: #fff
+
+    .indicators span
+      padding: 0 10px
+      
+      p
+        margin-left: 5px
+        display: inline
 
 //graphics
 .divider-top
@@ -90,6 +108,7 @@ $capptour-yellow: #f1df0d
 
 .divider-bottom
   margin-bottom: -7.5rem
+  z-index: 999
 
 // Helper Classes
 .full-width-image-container
