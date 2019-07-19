@@ -19,6 +19,8 @@ export const IndexPageTemplate = ({
   intro,
   divider,
   mostVisitedBack,
+  tour,
+  tourTypes,
 }) => (
   <div >
     <div
@@ -76,7 +78,9 @@ export const IndexPageTemplate = ({
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div className="carousel-item active"
+
+              >
                 <div className="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -108,6 +112,11 @@ export const IndexPageTemplate = ({
       </div>
       <Img className="divider-bottom" fluid={divider.childImageSharp.fluid} />
     </section>
+    <section>
+      <div className="container" style={{padding: '150px 0 100px 0'}}>
+        <Img style={{maxWidth: '60%', margin: '0 auto'}} fluid={tourTypes.childImageSharp.fluid} />
+      </div>
+    </section>
   </div>
 )
 
@@ -127,7 +136,9 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   const divider = data.divider
   const mvBackground = data.mvBackground
-  
+  const tour = data.tour
+  const tourTypes = data.tourTypes
+
   return (
     <Layout>
       <IndexPageTemplate
@@ -140,6 +151,8 @@ const IndexPage = ({ data }) => {
         intro={frontmatter.intro}
         divider={divider}
         mostVisitedBack={mvBackground}
+        tour={tour}
+        tourTypes={tourTypes}
       />
     </Layout>
   )
@@ -157,6 +170,20 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
+    tourTypes: file(relativePath: { eq: "tour-types.png" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    tour: file(relativePath: { eq: "tour.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     mvBackground: file(relativePath: { eq: "most-visited-back.jpg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
