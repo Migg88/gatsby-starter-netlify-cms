@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import '@fortawesome/fontawesome-free/css/all.css'
+import 'bootstrap'
+import './main.scss'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -38,6 +40,7 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
+
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />

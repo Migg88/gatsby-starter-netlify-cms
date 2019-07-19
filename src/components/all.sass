@@ -1,4 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables"
+
 // Config vars
 // Kaldi logo brand color: #FD461E
 
@@ -13,6 +14,27 @@ $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
+$purple-font: #462a6c
+$capptour-yellow: #f1df0d
+
+@import "~bulma"  
+
+.searcher input, select
+  &:not(.button)
+    border-left: 8px solid #f1df0d !important
+
+.searcher input, .control
+  &:not(.button)
+    margin-right: 20px
+
+.is-purple
+  color: $purple-font !important
+
+.is-flex
+  display: flex
+
+.navbar-centered
+  justify-content: center
 
 .flex-vertical-align
   align-items: center !important
@@ -24,11 +46,12 @@ $black: #2b2523
   border-right: 1px solid white
   height: 3rem
 
-.first-nav-links
-  padding-right: 2rem
-
 .navbar .navbar-menu
   box-shadow:none !important
+
+.section
+  padding-left: 0
+  padding-right: 0
 
 .content .taglist
   list-style: none
@@ -44,6 +67,29 @@ $black: #2b2523
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
     margin-top: 0
+
+.home-carousel
+  padding: 50px 0 50px 0
+
+//tour-card
+.tour-card
+  position: relative
+  border-radius: 15px
+  max-height: 400px
+
+//graphics
+.divider-top
+  margin-top: -7.5rem
+
+//titles
+.title.space-1
+  margin-top: 1rem
+  margin-bottom: 1rem
+.t-yellow
+  color: $capptour-yellow
+
+.divider-bottom
+  margin-bottom: -7.5rem
 
 // Helper Classes
 .full-width-image-container
@@ -61,7 +107,7 @@ $black: #2b2523
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 500px
     background-size: cover
     background-position: bottom
     display: flex
@@ -142,16 +188,13 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
-
-@import "~bulma"
-
-
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
 
 +mobile
+
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
