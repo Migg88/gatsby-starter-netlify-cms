@@ -44,6 +44,102 @@ const Tours = ({
 		    </form>
 		  </div>
 		</div>
+		<div className="container"
+			style={{
+				padding: '50px 0',
+				backgroundColor: '#f1f1f1',
+				boxShadow: '0 10px 21px rgba(0, 0, 0, 0.16)'
+			}}
+		>
+			<div className="columns">
+				<div className="column"
+					style={{
+						paddingTop: '5rem',
+						paddingBottom: '5rem',
+						backgroundColor: '#443575',
+						borderRadius: '20px'
+					}}
+				>
+					<h3 className="title has-text-white">Tours</h3>
+					<Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Tours culturales y temáticos (8)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Excursiones de un día (6)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Actividades al aire libre (9)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Tour y lugares de interés (5)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Deportes acuáticos (3)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Apto para todo público (5)
+	                </Link>
+	                <h3 className="title has-text-white">Precios</h3>
+					<Link className="filter-links has-text-white has-text-left" to="/about">
+	                  $ 0 - $500
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  $500 - $900
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  $950 - $2000
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  $2000 - $5000
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  $5000 - $10,000
+	                </Link>
+	                <h3 className="title has-text-white">Populares</h3>
+					<Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Tours culturales y temáticos (8)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Excursiones de un día (6)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Actividades al aire libre (9)
+	                </Link>
+	                <h3 className="title has-text-white">Especiales</h3>
+					<Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Oferta especial (0) 
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  De 4 horas a 1 día (15)
+	                </Link>
+	                <Link className="filter-links has-text-white has-text-left" to="/about">
+	                  Más de 3 días (5)
+	                </Link>
+				</div>
+				<div className="column is-four-fifths">
+					<div className="order-filter is-flex has-text-white"
+						style={{
+							backgroundColor: '#443575',
+							padding: '1rem',
+							borderRadius: '20px',
+						}}
+					>
+						<p>Ordenar por:</p>
+						<ul className="is-flex">
+							<li>
+								<a className="has-text-white order-links" href="#">Predeterminado</a>
+							</li>
+							<li>
+								<a className="has-text-white order-links" href="#">Precio más bajo</a>
+							</li>
+							<li>
+								<a className="has-text-white order-links" href="#">A-Z</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
   </Layout>
 )
