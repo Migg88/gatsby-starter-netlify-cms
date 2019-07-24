@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import '@fortawesome/fontawesome-free/css/all.css'
-import 'bootstrap'
+
 import './main.scss'
 
 const TemplateWrapper = ({ children }) => {
