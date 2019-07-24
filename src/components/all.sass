@@ -5,7 +5,7 @@
 
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
-$cap-purple: #422e6a
+$cap-purple: #443575
 $navbar-background-color: #422e6a;
 $navbar-height: 5rem
 $navbar-item-img-max-height: 3.75rem
@@ -18,6 +18,9 @@ $purple-font: #462a6c
 $capptour-yellow: #f1df0d
 
 @import "~bulma"  
+
+.relative
+  position: relative
 
 .searcher input, select
   &:not(.button)
@@ -94,6 +97,52 @@ $capptour-yellow: #f1df0d
       p
         margin-left: 5px
         display: inline
+
+//tour component in tours page
+.tours-container
+  margin: 1rem 0
+.tour
+  border-radius: 20px
+  padding: 3rem 0
+  &:first-child
+    padding-top: 1rem
+  .tour-wrapper
+    background-color: $cap-purple
+    width: calc(100% - 175px)
+    margin-left: auto
+    border-radius: 20px
+    .tour-image
+      width: 350px
+      height: 350px
+      border-radius: 50%
+      left: -175px
+      transform: translateY(-50%)
+      top: 50%
+      background-position: center
+      background-size: cover
+      position: absolute
+      border: solid 5px $capptour-yellow
+    .tour-info
+      padding: 1rem 1rem 1rem 190px
+      .indicators
+        justify-content: space-between
+        display: flex
+        align-items: center
+        span, .price
+          display: inline-block
+          padding: 0 .5rem
+        span
+          p
+            margin-left: 5px
+            display: inline
+        .price
+          span
+            display: block
+            font-size: .8rem
+          button
+            width: 100%
+            background-color: $capptour-yellow
+
 
 //graphics
 .divider-top

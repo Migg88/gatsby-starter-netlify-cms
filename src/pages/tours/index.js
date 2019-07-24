@@ -4,7 +4,8 @@ import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
 const Tours = ({
-	toursBack
+	toursBack,
+	tulumImage
 }) => (
   <Layout>
     <div>
@@ -127,16 +128,247 @@ const Tours = ({
 						<p>Ordenar por:</p>
 						<ul className="is-flex">
 							<li>
-								<a className="has-text-white order-links" href="#">Predeterminado</a>
+								<Link className="has-text-white order-links">Predeterminado</Link>
 							</li>
 							<li>
-								<a className="has-text-white order-links" href="#">Precio más bajo</a>
+								<Link className="has-text-white order-links">Precio más bajo</Link>
 							</li>
 							<li>
-								<a className="has-text-white order-links" href="#">A-Z</a>
+								<Link className="has-text-white order-links">A-Z</Link>
 							</li>
 						</ul>
 					</div>
+					<div className="tours-container">
+						<div className="tour has-text-white">
+							<div className="relative tour-wrapper is-flex">
+								<div className="tour-image"
+									style={{
+										backgroundImage: `url(${
+								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
+								        })`
+									}}
+								>
+								</div>
+								<div className="tour-info">
+									<h3 className="title has-text-white is-size-4">
+										Tour Tulum Con Cenotes Desde Cancún
+									</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+									</p>
+									<div className="indicators">
+										<div>
+											<span>
+						                      <i className="fas fa-clock"></i>
+						                      <p>6 horas</p>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-utensils"></i>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-shuttle-van"></i>
+						                    </span>
+						                    <span>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                    </span>
+					                    </div>
+					                    <div className="price ">
+					                    	<p className="is-size-3 has-text-right">
+					                    		<span>desde</span>
+					                    		$3000
+					                    	</p>
+					                    	<button className="button is-rounded">
+					                    		Detalles
+					                    	</button>
+					                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="tour has-text-white">
+							<div className="relative tour-wrapper is-flex">
+								<div className="tour-image"
+									style={{
+										backgroundImage: `url(${
+								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
+								        })`
+									}}
+								>
+								</div>
+								<div className="tour-info">
+									<h3 className="title has-text-white is-size-4">
+										Tour Tulum Con Cenotes Desde Cancún
+									</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+									</p>
+									<div className="indicators">
+										<div>
+											<span>
+						                      <i className="fas fa-clock"></i>
+						                      <p>6 horas</p>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-utensils"></i>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-shuttle-van"></i>
+						                    </span>
+						                    <span>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                    </span>
+					                    </div>
+					                    <div className="price">
+					                    	<p className="is-size-3 has-text-right">
+					                    		<span>desde</span>
+					                    		$3000
+					                    	</p>
+					                    	<button className="button is-rounded">
+					                    		Detalles
+					                    	</button>
+					                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="tour has-text-white">
+							<div className="relative tour-wrapper is-flex">
+								<div className="tour-image"
+									style={{
+										backgroundImage: `url(${
+								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
+								        })`
+									}}
+								>
+								</div>
+								<div className="tour-info">
+									<h3 className="title has-text-white is-size-4">
+										Tour Tulum Con Cenotes Desde Cancún
+									</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+									</p>
+									<div className="indicators">
+										<div>
+											<span>
+						                      <i className="fas fa-clock"></i>
+						                      <p>6 horas</p>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-utensils"></i>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-shuttle-van"></i>
+						                    </span>
+						                    <span>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                    </span>
+					                    </div>
+					                    <div className="price">
+					                    	<p className="is-size-3 has-text-right">
+					                    		<span>desde</span>
+					                    		$3000
+					                    	</p>
+					                    	<button className="button is-rounded">
+					                    		Detalles
+					                    	</button>
+					                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="tour has-text-white">
+							<div className="relative tour-wrapper is-flex">
+								<div className="tour-image"
+									style={{
+										backgroundImage: `url(${
+								          !!tulumImage.childImageSharp ? tulumImage.childImageSharp.fluid.src : tulumImage
+								        })`
+									}}
+								>
+								</div>
+								<div className="tour-info">
+									<h3 className="title has-text-white is-size-4">
+										Tour Tulum Con Cenotes Desde Cancún
+									</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	
+									</p>
+									<div className="indicators">
+										<div>
+											<span>
+						                      <i className="fas fa-clock"></i>
+						                      <p>6 horas</p>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-utensils"></i>
+						                    </span>
+						                    <span>
+						                      <i className="fas fa-shuttle-van"></i>
+						                    </span>
+						                    <span>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                      <i className="far fa-star"></i>
+						                    </span>
+					                    </div>
+					                    <div className="price">
+					                    	<p className="is-size-3 has-text-right">
+					                    		<span>desde</span>
+					                    		$3000
+					                    	</p>
+					                    	<button className="button is-rounded">
+					                    		Detalles
+					                    	</button>
+					                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+					  <a class="pagination-previous">Previous</a>
+					  <a class="pagination-next">Next page</a>
+					  <ul class="pagination-list">
+					    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+					    <li><span class="pagination-ellipsis">&hellip;</span></li>
+					    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+					    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+					    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+					    <li><span class="pagination-ellipsis">&hellip;</span></li>
+					    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+					  </ul>
+					</nav>
 				</div>
 			</div>
 		</div>
@@ -149,6 +381,7 @@ export default class ToursPage extends React.Component {
 		return(
 			<Tours 
 				toursBack={this.props.data.toursBack}
+				tulumImage={this.props.data.tulum}
 			/>
 		)
 	}
@@ -157,6 +390,13 @@ export default class ToursPage extends React.Component {
 export const pageQuery = graphql`
   query {
     toursBack: file(relativePath: { eq: "tours-background.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    tulum: file(relativePath: { eq: "tulum.jpg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
