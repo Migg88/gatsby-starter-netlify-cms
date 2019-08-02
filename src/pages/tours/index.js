@@ -41,7 +41,7 @@ const Tours = ({
 		        </div>
 		      </div>
 		      <input className="input is-large" type="date" placeholder="Fecha" />
-		      <input className="button is-warning is-large" type="submit" value="Buscar" />
+		      <input className="button is-large" style={{backgroundColor: '#eab92a', color: '#000'}} type="submit" value="Buscar" />
 		    </form>
 		  </div>
 		</div>

@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import '../components/index.sass'
 
 import videoWayak from '../img/wayak.mp4'
 
@@ -23,6 +24,9 @@ export const IndexPageTemplate = ({
   secondTour,
   thirdTour,
   tourTypes,
+  culturales,
+  acuaticos,
+  vacacionales,
 }) => (
   <div >
     <div
@@ -56,7 +60,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
           <input className="input is-large" type="date" placeholder="Fecha" />
-          <input className="button is-warning is-large" type="submit" value="Buscar" />
+          <input style={{backgroundColor: '#eab92a', color: '#000'}} className="button is-large" type="submit" value="Buscar" />
         </form>
       </div>
     </div>
@@ -217,7 +221,25 @@ export const IndexPageTemplate = ({
     <section>
 
       <div className="container" style={{padding: '150px 0 100px 0', backgroundColor: '#f1f1f1', boxShadow: '0 10px 21px rgba(0, 0, 0, 0.16)'}}>
-        <h2 className="title t-yellow is-1 has-text-centered space-1" style={{paddingBottom: '50px'}}>Nuestros Tours</h2>
+        <h2 className="title t-yellow is-1 has-text-centered space-1" style={{marginBottom: '50px'}}>Nuestros Tours</h2>
+        <div className="tour-type-container">
+          <div className="tour-type">
+            <Img className="tour-type-rounded" fluid={culturales.childImageSharp.fluid} />
+            <h3 className="title">Tours Culturales</h3>
+            <div className="content">
+              <p className="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <span></span>
+              <Link className="button" to="tours" />
+            </div>
+          </div>
+        </div>
         <Img style={{maxWidth: '60%', margin: '0 auto'}} fluid={tourTypes.childImageSharp.fluid} />
       </div>
     </section>
@@ -244,6 +266,9 @@ const IndexPage = ({ data }) => {
   const tourTypes = data.tourTypes
   const secondTour = data.secondTour
   const thirdTour = data.third
+  const culturales = data.culturales
+  const acuaticos = data.acuaticos
+  const vacacionales = data.vacacionales
 
   return (
     <Layout>
@@ -261,6 +286,9 @@ const IndexPage = ({ data }) => {
         secondTour={secondTour}
         thirdTour={thirdTour}
         tourTypes={tourTypes}
+        acuaticos={acuaticos}
+        culturales={culturales}
+        vacacionales={vacacionales}
       />
     </Layout>
   )
@@ -278,6 +306,27 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
+    acuaticos: file(relativePath: { eq: "acuaticos.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    vacacionales: file(relativePath: { eq: "vacacionales.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    culturales: file(relativePath: { eq: "culturales.jpg" }){
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     tourTypes: file(relativePath: { eq: "tour-types.png" }){
       childImageSharp {
         fluid(maxWidth: 1920) {

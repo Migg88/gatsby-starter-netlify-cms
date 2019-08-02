@@ -108,7 +108,7 @@ const Navbar = class extends React.Component {
               className="navbar-menu navbar-centered"
             >
               <div className="is-flex flex-vertical-align has-text-centered">
-                <Link className="navbar-item is-purple" to="/about">
+                <Link className="navbar-item is-purple" to="/">
                   Inicio
                 </Link>
                 <Link className="navbar-item is-purple" to="/products">
@@ -124,7 +124,7 @@ const Navbar = class extends React.Component {
                   Paquetes vacacionales
                 </Link>
                 <div className="navbar-item has-dropdown is-hoverable">
-                  <Link className="navbar-item is-purple" to="/contact/examples">
+                  <Link className="navbar-item is-purple" to="/tours">
                     Tours
                   </Link>
 

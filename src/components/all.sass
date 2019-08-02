@@ -15,18 +15,18 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 $purple-font: #462a6c
-$capptour-yellow: #f1df0d
+$capptour-yellow: #eab92a
 
 @import "~bulma"  
 
 .relative
   position: relative
 
-.searcher input, select
+.searcher input, .searcher select
   &:not(.button)
     border-left: 8px solid #f1df0d !important
 
-.searcher input, .control
+.searcher input, .searcher .control
   &:not(.button)
     margin-right: 20px
 
@@ -234,6 +234,10 @@ footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
 
+footer .title
+  padding-bottom: 10px;
+  border-bottom: solid 2px #443575
+
 //Menu overrides
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
@@ -250,8 +254,6 @@ $menu-label-color: $white-ter
 .menu-list
   list-style: none !important
   text-align: left
-.social
-  padding: 2em
 .social a
     padding: .5em .5em .3em .5em
     border-radius: 1em

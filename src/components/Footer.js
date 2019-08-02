@@ -10,7 +10,7 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer style={{backgroundColor: '#f1df0d'}} className="footer has-text-white-ter">
+      <footer style={{backgroundColor: '#eab92a'}} className="footer has-text-white-ter">
         <div className="content has-text-centered">
           <img
             src={logo}
@@ -20,33 +20,53 @@ const Footer = class extends React.Component {
         </div>
         <div className="content has-text-centereds has-text-white-ter">
           <div className="container  has-text-white-ter">
+            <div className="columns" style={{borderBottom: 'solid 5px #443575', paddingBottom: '2rem', marginBottom: '5rem'}}>
+              <div className="column is-full">
+                <div className="columns">
+                  <div className="column is-half">
+                    <p>¿Quieres recibir ofertas exclusivas de los tours? !Suscribete a nuestro boletín de noticias!</p>
+                  </div>
+                  <div className="column is-half">
+                    <form style={{display: 'flex'}}>
+                      <div className="field" style={{width: '100%'}}>
+                        <div className="control">
+                          <input className="input" type="text" placeholder="Dirección de email"/>
+                        </div>
+                      </div>
+                      <input className="button has-text-white" style={{backgroundColor: '#473278', marginLeft: '-5px', border: 'none', width: '200px'}} type="submit" value="Suscribirse" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="columns">
               <div className="column is-4">
                 <section className="menu">
+                  <h3 className="title has-text-white">Contáctanos</h3>
                   <ul className="menu-list">
                     <li>
-                      <Link to="/" className="navbar-item">
+                      <Link to="/" className="navbar-item has-text-white">
                         Home
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
+                      <Link className="navbar-item has-text-white" to="/about">
                         About
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
+                      <Link className="navbar-item has-text-white" to="/products">
                         Products
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/contact/examples">
+                      <Link className="navbar-item has-text-white" to="/contact/examples">
                         Form Examples
                       </Link>
                     </li>
                     <li>
                       <a
-                        className="navbar-item"
+                        className="navbar-item has-text-white"
                         href="/admin/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -59,14 +79,15 @@ const Footer = class extends React.Component {
               </div>
               <div className="column is-4">
                 <section>
+                  <h3 className="title has-text-white">Enlaces rápidos</h3>
                   <ul className="menu-list">
                     <li>
-                      <Link className="navbar-item" to="/blog">
+                      <Link className="navbar-item has-text-white" to="/blog">
                         Latest Stories
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/contact">
+                      <Link className="navbar-item has-text-white" to="/contact">
                         Contact
                       </Link>
                     </li>
@@ -74,6 +95,7 @@ const Footer = class extends React.Component {
                 </section>
               </div>
               <div className="column is-4 social">
+                <h3 className="title has-text-white">Siguenos</h3>
                 <a title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
