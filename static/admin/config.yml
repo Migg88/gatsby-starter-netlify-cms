@@ -68,7 +68,7 @@ collections:
     folder: "src/pages/tours"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image}
       - {label: Description, name: description, widget: string}
