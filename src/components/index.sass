@@ -2,17 +2,26 @@
 	max-width: 768px
 	margin: 0 auto
 	.tour-type
-		height: 330px
+		height: 300px
 		position: relative
-		border-radius: 0 50% 50% 0
-		.title
-			width: calc(100% - 150px)
-			margin-left: auto
-			padding-left: 150px
-			background-image: linear-gradient(to right, #eab92a, #fff )
-			color: #fff
+		margin-bottom: 30px
 		.content
-			padding-left: 300px
+			width: calc(100% - 150px)
+			height: 100%
+			margin-left: auto
+			background-color: #422e6a
+			border-radius: 0 300px 300px 0
+			overflow: hidden
+			.title
+				padding: 20px 0 20px 150px
+				background-image: linear-gradient(to right, #eab92a, #fff )
+				color: #fff
+			.description 
+				padding-left: 170px
+				padding-right: 30px
+			.button
+				margin-left: 170px
+				background-color: #eab92a
 		.tour-type-rounded
 			width: 300px
 			height: 300px
@@ -20,3 +29,63 @@
 			position: absolute !important
 			top: 0
 			left: 0
+.animatable
+	animation: slide 15s linear infinite
+	.discount-card-container
+		.card
+			border-radius: 1rem
+			.discount-overlay
+				display: flex
+				flex-flow: column
+				justify-content: center
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				background-color: rgba(0, 0, 0, .7)
+				border-radius: inherit
+				z-index: 1
+				.discount-number
+					font-size: 3rem
+					line-height: 3rem
+					animation: .1s shake infinite alternate
+				&:hover
+					background-color: rgba(234, 185, 42, .9)
+					.discount-number
+						animation: none
+
+//contact
+
+.contact-info-container
+	background-color: #eab92a
+	padding: 1em
+	animation: bounce infinite
+	&:hover
+		animation: none
+	a
+		font-size: 1.5rem
+
+@keyframes bounce
+	0%
+		transform: rotateX(-40deg)
+		box-shadow: unset
+	50%
+		transform: rotateX(40deg)
+		box-shadow: 0 3px 3px #000
+	100%
+		transform: rotateX(-40deg)
+		box-shadow: unset
+
+@keyframes slide
+	0%
+		background-position: 0 0
+	100%
+		background-position: -1920px 0
+
+@keyframes shake
+	0%
+		transform: skew(0, -5deg)
+	100%
+		transform: skew(0, 5deg)
+	

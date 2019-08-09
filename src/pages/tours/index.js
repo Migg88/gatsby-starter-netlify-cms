@@ -357,8 +357,8 @@ const Tours = ({
 						</div>
 					</div>
 					<nav class="pagination is-centered" role="navigation" aria-label="pagination">
-					  <a class="pagination-previous">Previous</a>
-					  <a class="pagination-next">Next page</a>
+					  <a href="#" class="pagination-previous">Previous</a>
+					  <a href="#" class="pagination-next">Next page</a>
 					  <ul class="pagination-list">
 					    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
 					    <li><span class="pagination-ellipsis">&hellip;</span></li>

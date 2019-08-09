@@ -1,5 +1,8 @@
 backend:
   name: git-gateway
+  accept_roles:
+    -admin
+    -edito
   branch: master
 
 media_folder: static/img
@@ -59,3 +62,19 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+
+  - name: "tours"
+    label: "Tours"
+    folder: "src/pages/tours"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Description, name: description, widget: string}
+      - {label: Price, name: price, widget: object, fields: [{label: Adults Price, name: adults-price, widget: number, valueType: float}, {label: Children Price, name: children-price, widget: number, valueType: float}, {label: Adults Discount, name: adults-discount, widget: number, valueType: float}, {label: Children Discount, name: children-discount, widget: number, valueType: float}, {label: Quintanarroense price, name: q-price, widget: number, valueType: float}]}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: Tour type, name: tour-type, widget: list }
+  
+
+      
