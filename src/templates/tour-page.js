@@ -5,21 +5,18 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const tourComponent = ({
-	content,
-	contentComponent,
-	helmet,
-}) => {
-
-	const tourContent = contentComponent || Content
+const TourComponent = () => {
 
 	return(
-
-		<p>works</p>
+		<Layout>
+			<p>works</p>
+		</Layout>
 
 	)
 
 }
+
+export default TourComponent
 
 export const tourQuery = graphql`
 	query TourPage($id: String!){

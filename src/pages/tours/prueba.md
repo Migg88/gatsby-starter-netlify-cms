@@ -1,5 +1,5 @@
 ---
-templateKey: ''
+templateKey: 'tour-page'
 title: prueba
 image: /img/acuaticos.jpg
 description: lorem
