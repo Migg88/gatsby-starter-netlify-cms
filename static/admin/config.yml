@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   accept_roles:
     -admin
-    -edito
+    -editor
   branch: master
 
 media_folder: static/img
@@ -72,7 +72,7 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image}
       - {label: Description, name: description, widget: string}
-      - {label: Price, name: price, widget: object, fields: [{label: Adults Price, name: adults-price, widget: number, valueType: float}, {label: Children Price, name: children-price, widget: number, valueType: float}, {label: Adults Discount, name: adults-discount, widget: number, valueType: float}, {label: Children Discount, name: children-discount, widget: number, valueType: float}, {label: Quintanarroense price, name: q-price, widget: number, valueType: float}]}
+      - {label: Price, name: price, widget: object, fields: [{label: Adults Price, name: adults-price, widget: number, valueType: float}, {label: Children Price, name: children-price, widget: number, valueType: float}, {label: Adults Discount, name: adults-discount, widget: number, valueType: float}, {label: Children Discount, name: children-discount, widget: number, valueType: float}, {label: Quintanarroense price, name: q-price, widget: number, valueType: float}, {label: Transportation price, name: transportation, widget: number, valueType: float}]}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: Tour type, name: tour-type, widget: list }
   
