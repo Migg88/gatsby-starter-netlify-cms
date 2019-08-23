@@ -9,10 +9,13 @@ import Content, { HTMLContent } from '../components/Content'
 
 const TourComponent = ({data}) => {
 	
+	const { frontmatter } = data.markdownRemark
 	const image = data.acuaticos
 	const descuento = data.descuento
 	const descripcion = data.descripcion
 	const sugerencias = data.sugerencias
+
+	console.log(frontmatter)
 
 	return(
 		<Layout>
@@ -29,17 +32,17 @@ const TourComponent = ({data}) => {
 							<Img style={{borderRadius: '30px'}} fluid={image.childImageSharp.fluid} />
 							<Img style={{width: '100%', marginTop: '30px'}} fluid={descripcion.childImageSharp.fluid} />
 						</div>
-						<div className="column">
+						<div className="column is-one-third">
 							<h1 className="title t-yellow is-1 has-text-centered" style={{borderBottom: '1px solid #eab92a'}}>
 								Tour Bacalar
 							</h1>
 							<div className="columns">
-								<div className="column">
+								<div className="column is-half">
 									<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">50%<span className="is-size-7">de descuento</span></p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">Adultos</p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 2,O18.00 MXN</p>
 								</div>
-								<div className="column">
+								<div className="column is-half">
 								<p className="t-yellow is-size-3 has-text-centered has-text-weight-bold">30%<span className="is-size-7">de descuento</span></p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">Niños</p>
 									<p className="has-text-centered is-purple is-size-5 has-text-weight-bold">$ 1,OOO.00 MXN</p>
@@ -57,7 +60,7 @@ const TourComponent = ({data}) => {
 								  </div>
 								</div>
 								<div className="columns">
-									<div className="column">
+									<div className="column is-half">
 										<div className="field">
 										  <div className="control">
 										    <div className="select is-medium">
@@ -69,7 +72,7 @@ const TourComponent = ({data}) => {
 										  </div>
 										</div>
 									</div>
-									<div className="column">
+									<div className="column is-half">
 										<div className="field">
 										  <div className="control">
 										    <div className="select is-medium">
