@@ -4,11 +4,11 @@ title: prueba
 image: /img/acuaticos.jpg
 description: lorem
 price:
-  adultsDiscount: 10
-  adultsPrice: 5000
-  childrenDiscount: 20
-  childrenPrice: 4000
-  qPrice: 3500
+  adults_discount: 30
+  adults_price: 5000
+  children_discount: 50
+  children_price: 4300
+  q_price: 1200
   transportation: 1499
 ---
 <h1>Works!</h1>
