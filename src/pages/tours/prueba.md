@@ -1,15 +1,14 @@
 ---
-templateKey: 'tour-page'
+templateKey: tour-page
 title: prueba
 image: /img/acuaticos.jpg
 description: lorem
 price:
-  adults-discount: 200
-  adults-price: 200
-  children-discount: 200
-  children-price: 200
-  q-price: 200
-tour-type:
-  - ''
+  adultsDiscount: 10
+  adultsPrice: 5000
+  childrenDiscount: 20
+  childrenPrice: 4000
+  qPrice: 3500
+  transportation: 1499
 ---
-prueba
+<h1>Works!</h1>
