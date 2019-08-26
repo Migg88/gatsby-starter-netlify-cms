@@ -15,7 +15,7 @@ const TourComponent = ({data}) => {
 	const descripcion = data.descripcion
 	const sugerencias = data.sugerencias
 
-	console.log(frontmatter)
+	console.log(data)
 
 	return(
 		<Layout>
@@ -116,8 +116,25 @@ export default TourComponent
 export const tourQuery = graphql`
 	query TourPage($id: String!){
 		markdownRemark(id: { eq: $id }) {
+			html
 			frontmatter {
 				title
+				image{
+					childImageSharp{
+						fluid(maxWidth: 1200) {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+				description
+				price {
+					adults_discount
+            		adults_price
+            		children_discount
+            		children_price
+            		q_price
+				}
+
 			}
 		}
 		acuaticos: file(relativePath: { eq: "acuaticos.jpg" }){

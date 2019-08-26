@@ -15,7 +15,7 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content
-
+  
   return (
     <section className="section">
       {helmet || ''}
@@ -56,7 +56,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
+  console.log(data)
   return (
     <Layout>
       <BlogPostTemplate
