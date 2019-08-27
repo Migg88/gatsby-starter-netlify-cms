@@ -19,6 +19,9 @@ $capptour-yellow: #eab92a
 
 @import "~bulma" 
 
+.brand-nav
+  height: 120px;
+
 .no-border
   border: none !important 
 
@@ -240,6 +243,8 @@ footer.footer
 footer .title
   padding-bottom: 10px;
   border-bottom: solid 2px #443575
+.burger
+  color: #fff;
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -284,9 +289,25 @@ $menu-label-color: $white-ter
 
 +mobile
 
+  .brand-nav
+    height: auto;
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+  .hide-on-mobile
+    display: none;
+  .searcher
+    flex-direction: column !important;
+  .full-width-image
+    height: auto;
+    min-height: 500px;
+  .searcher input:not(.button), .searcher .control:not(.button)
+    margin-right: 0;
+    margin-bottom: 1rem;
+  .select, .select .is-hovered
+    width: 100%;
+  .animatable
+    background: none !important;

@@ -71,8 +71,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image}
-      - {label: Description, name: description, widget: string}
-      - {label: Price, name: price, widget: object, fields: [{label: Adults Price, name: adultsPrice, widget: number, valueType: float}, {label: Children Price, name: childrenPrice, widget: number, valueType: float}, {label: Adults Discount, name: adultsDiscount, widget: number, valueType: float}, {label: Children Discount, name: childrenDiscount, widget: number, valueType: float}, {label: Quintanarroense price, name: qPrice, widget: number, valueType: float}, {label: Transportation price, name: transportation, widget: number, valueType: float}]}
+      - {label: Description, name: description, widget: string, required: false}
+      - {label: Price, name: price, widget: object, fields: [{label: Adults Price, name: adults_price, widget: number, valueType: float}, {label: Children Price, name: children_price, widget: number, valueType: float}, {label: Adults Discount, name: adults_discount, widget: number, valueType: float, required: false}, {label: Children Discount, name: children_discount, widget: number, valueType: float, required: false}, {label: Quintanarroense price, name: q_price, widget: number, valueType: float, required: false}, {label: Transportation price, name: transportation, widget: number, valueType: float, required: false}]}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: Tour type, name: tourType, widget: list }
   

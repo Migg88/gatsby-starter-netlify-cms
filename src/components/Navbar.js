@@ -35,8 +35,7 @@ const Navbar = class extends React.Component {
     return (
       <div>
         <nav
-          className="navbar"
-          style={{height: '120px'}}
+          className="navbar brand-nav"
         >
           <div className="container">
             <div className="navbar-brand">
@@ -97,7 +96,7 @@ const Navbar = class extends React.Component {
           </div>
         </nav>
         <nav
-          className="navbar"
+          className="navbar hide-on-mobile"
           role="navigation"
           aria-label="main-navigation"
           style={{backgroundColor: 'white' }}

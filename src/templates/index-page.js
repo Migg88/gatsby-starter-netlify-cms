@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
   snorkel,
   animatable,
 }) => (
-  <div >
+  <div>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
     >
       <Img className="divider-top" fluid={divider.childImageSharp.fluid} />
       <div className="container">
-        <h2 className="title t-yellow is-1 has-text-centered space-1">
+        <h2 className="title t-yellow is-1-desktop has-text-centered space-1">
           <span><i className="fas fa-map-marker-alt"></i></span>Los Más Visitados
         </h2>
         <div className="most-visited-tours" style={{marginTop: '40px', marginBottom: '50px'}}>
@@ -229,7 +229,7 @@ export const IndexPageTemplate = ({
       <section>
 
         <div style={{padding: '150px 0 100px 0',}}>
-          <h2 className="title t-yellow is-1 has-text-centered space-1" style={{marginBottom: '50px'}}>
+          <h2 className="title t-yellow is-1-desktop has-text-centered space-1" style={{marginBottom: '50px'}}>
            <span><i className="fas fa-route"></i></span>Nuestros Tours
           </h2>
           <div className="tour-type-container">
@@ -283,7 +283,7 @@ export const IndexPageTemplate = ({
     </div>
 
     <section>
-      <h2 className="title t-yellow has-text-centered" style={{fontSize: '5rem', margin: '8rem 0'}}><span><i class="fas fa-percent"></i></span>Ofertas</h2>
+      <h2 className="title t-yellow has-text-centered is-size-1-mobile" style={{fontSize: '5rem', margin: '8rem 0'}}><span><i className="fas fa-percent"></i></span>Ofertas</h2>
       <div className="animatable"
           style={{
             backgroundImage: `url(${
@@ -482,15 +482,15 @@ export const IndexPageTemplate = ({
 
     <section style={{padding: '5rem 0',}}>
       <div className="container">
-        <h2 style={{marginBottom: '5rem'}} className="title t-yellow is-1 has-text-centered">Contáctanos</h2>
-        <div className="columns is-mobile">
-          <div className="column is-half-desktop is-full-mobile">
+        <h2 style={{marginBottom: '5rem'}} className="title t-yellow is-1-desktop has-text-centered">Contáctanos</h2>
+        <div className="columns">
+          <div className="column is-half-desktop is-12-mobile">
             <form>
               <div className="field">
                 <div className="control has-icons-left">
                   <input className="input is-large" type="text" placeholder="Nombre" />
                   <span className="icon is-left">
-                    <i class="fas fa-user"></i>
+                    <i className="fas fa-user"></i>
                   </span>
                 </div>
               </div>
@@ -498,7 +498,7 @@ export const IndexPageTemplate = ({
                 <div className="control has-icons-left">
                   <input className="input is-large" type="text" placeholder="E-mail" />
                   <span className="icon is-left">
-                    <i class="fas fa-at"></i>
+                    <i className="fas fa-at"></i>
                   </span>
                 </div>
               </div>
@@ -506,18 +506,18 @@ export const IndexPageTemplate = ({
                 <div className="control has-icons-left">
                   <input className="input is-large" type="text" placeholder="Teléfono" />
                   <span className="icon is-left">
-                    <i class="fas fa-phone-alt"></i>
+                    <i className="fas fa-phone-alt"></i>
                   </span>
                 </div>
               </div>
               <div className="field">  
                 <div className="control">
-                  <textarea class="textarea has-fixed-size is-large" placeholder="Mensaje"></textarea>
+                  <textarea className="textarea has-fixed-size is-large" placeholder="Mensaje"></textarea>
                 </div>
               </div>
             </form>
           </div>
-          <div className="column is-half-desktop is-full-mobile">
+          <div className="column is-half-desktop is-12-mobile">
             <div 
               style={{
                 backgroundImage: `url(${

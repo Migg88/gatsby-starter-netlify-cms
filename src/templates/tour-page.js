@@ -8,14 +8,17 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 const TourComponent = ({data}) => {
-	
+
+	const html = data.markdownRemark.html
 	const { frontmatter } = data.markdownRemark
+	const title = data.markdownRemark.frontmatter.title
+	const img = data.markdownRemark.frontmatter.image
 	const image = data.acuaticos
 	const descuento = data.descuento
 	const descripcion = data.descripcion
 	const sugerencias = data.sugerencias
 
-	console.log(data)
+	console.log(img)
 
 	return(
 		<Layout>
@@ -128,13 +131,12 @@ export const tourQuery = graphql`
 				}
 				description
 				price {
-					adults_discount
-            		adults_price
-            		children_discount
-            		children_price
-            		q_price
-				}
-
+		            adults_discount
+		            adults_price
+		            children_discount
+		            children_price
+		            q_price
+		        }
 			}
 		}
 		acuaticos: file(relativePath: { eq: "acuaticos.jpg" }){
