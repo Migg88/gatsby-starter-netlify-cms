@@ -63,22 +63,23 @@ export const IndexPageTemplate = ({
             </div>
           </div>
           <input className="input is-large" type="date" placeholder="Fecha" />
-          <input style={{backgroundColor: '#eab92a', color: '#000'}} className="button is-large" type="submit" value="Buscar" />
+          <input style={{backgroundColor: '#eab92a', color: '#fff'}} className="button is-large" type="submit" value="Buscar" />
         </form>
       </div>
     </div>
-    <section className="section"
+    <section
       style={{
         backgroundImage: `url(${
           !!mostVisitedBack.childImageSharp ? mostVisitedBack.childImageSharp.fluid.src : mostVisitedBack
         })`,
         backgroundPosition: `center`,
         backgroundAttachment: `fixed`,
+        padding: `3rem 0`,
       }}
     >
       <Img className="divider-top" fluid={divider.childImageSharp.fluid} />
       <div className="container">
-        <h2 className="title t-yellow is-1-desktop has-text-centered space-1">
+        <h2 className="title t-yellow is-size-1-desktop has-text-centered space-1">
           <span><i className="fas fa-map-marker-alt"></i></span>Los Más Visitados
         </h2>
         <div className="most-visited-tours" style={{marginTop: '40px', marginBottom: '50px'}}>
@@ -99,7 +100,7 @@ export const IndexPageTemplate = ({
                 }}
               >
                 <div className="carousel-caption tour-caption d-none d-md-block">
-                  <h3 className="title is-2 t-yellow">Chichen Itza</h3>
+                  <h3 className="title is-2 is-size-4-mobile t-yellow">Chichen Itza</h3>
                   <div className="indicators">
                     <span>
                       <i className="fas fa-clock"></i>
@@ -118,7 +119,7 @@ export const IndexPageTemplate = ({
                       <i className="far fa-star"></i>
                     </span>
                   </div>
-                  <p>
+                  <p className="is-hidden-mobile">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -139,7 +140,7 @@ export const IndexPageTemplate = ({
                 }}
               >
                 <div className="carousel-caption tour-caption d-none d-md-block">
-                  <h3 className="title is-2 t-yellow">Tour Title</h3>
+                  <h3 className="title is-2 is-size-4-mobile t-yellow">Tour Title</h3>
                   <div className="indicators">
                     <span>
                       <i className="fas fa-clock"></i>
@@ -158,7 +159,7 @@ export const IndexPageTemplate = ({
                       <i className="far fa-star"></i>
                     </span>
                   </div>
-                  <p>
+                  <p className="is-hidden-mobile">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -179,7 +180,7 @@ export const IndexPageTemplate = ({
                 }}
               >
                 <div className="carousel-caption tour-caption d-none d-md-block is-rounded">
-                  <h3 className="title is-2 t-yellow">Tour Title</h3>
+                  <h3 className="title is-2 is-size-4-mobile t-yellow">Tour Title</h3>
                   <div className="indicators">
                     <span>
                       <i className="fas fa-clock"></i>
@@ -198,7 +199,7 @@ export const IndexPageTemplate = ({
                       <i className="far fa-star"></i>
                     </span>
                   </div>
-                  <p>
+                  <p className="is-hidden-mobile">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -228,14 +229,19 @@ export const IndexPageTemplate = ({
     
       <section>
 
-        <div style={{padding: '150px 0 100px 0',}}>
-          <h2 className="title t-yellow is-1-desktop has-text-centered space-1" style={{marginBottom: '50px'}}>
+        <div className="tour-type-section">
+          <h2 className="title t-yellow is-size-1-desktop has-text-centered space-1" style={{marginBottom: '50px'}}>
            <span><i className="fas fa-route"></i></span>Nuestros Tours
           </h2>
           <div className="tour-type-container">
             <div className="tour-type">
               <Img className="tour-type-rounded" fluid={culturales.childImageSharp.fluid} />
-              <div className="content">
+              <div className="overlay is-hidden-tablet">
+                <span className="icon is-medium">
+                  <i class="fas fa-gopuram"></i>
+                </span>
+              </div>
+              <div className="content is-hidden-mobile">
                 <h3 className="title">Tours Culturales</h3>
                 <p className="description has-text-white">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -249,7 +255,7 @@ export const IndexPageTemplate = ({
             </div>
             <div className="tour-type">
               <Img className="tour-type-rounded" fluid={acuaticos.childImageSharp.fluid} />
-              <div className="content">
+              <div className="content is-hidden-mobile">
                 <h3 className="title">Tours Acuaticos</h3>
                 <p className="description has-text-white">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -263,7 +269,7 @@ export const IndexPageTemplate = ({
             </div>
             <div className="tour-type">
               <Img className="tour-type-rounded" fluid={vacacionales.childImageSharp.fluid} />
-              <div className="content">
+              <div className="content is-hidden-mobile">
                 <h3 className="title">Tours Vacacionales</h3>
                 <p className="description has-text-white">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -482,7 +488,7 @@ export const IndexPageTemplate = ({
 
     <section style={{padding: '5rem 0',}}>
       <div className="container">
-        <h2 style={{marginBottom: '5rem'}} className="title t-yellow is-1-desktop has-text-centered">Contáctanos</h2>
+        <h2 style={{marginBottom: '5rem'}} className="title t-yellow is-size-1-desktop has-text-centered">Contáctanos</h2>
         <div className="columns">
           <div className="column is-half-desktop is-12-mobile">
             <form>

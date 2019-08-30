@@ -41,19 +41,20 @@ const Tours = ({
 		        </div>
 		      </div>
 		      <input className="input is-large" type="date" placeholder="Fecha" />
-		      <input className="button is-large" style={{backgroundColor: '#eab92a', color: '#000'}} type="submit" value="Buscar" />
+		      <input className="button is-large" style={{backgroundColor: '#eab92a', color: '#fff'}} type="submit" value="Buscar" />
 		    </form>
 		  </div>
 		</div>
 		<div className="container"
 			style={{
-				padding: '50px 0',
+				paddingTop: '50px',
+				paddingBottom: '50px',
 				backgroundColor: '#f1f1f1',
 				boxShadow: '0 10px 21px rgba(0, 0, 0, 0.16)'
 			}}
 		>
 			<div className="columns">
-				<div className="column"
+				<div className="column is-hidden-mobile"
 					style={{
 						paddingTop: '5rem',
 						paddingBottom: '5rem',
@@ -125,8 +126,8 @@ const Tours = ({
 							borderRadius: '20px',
 						}}
 					>
-						<p>Ordenar por:</p>
-						<ul className="is-flex">
+						<p style={{marginRight: '10px'}}>Ordenar por:</p>
+						<ul className="is-flex is-hidden-mobile">
 							<li>
 								<Link className="has-text-white order-links">Predeterminado</Link>
 							</li>
@@ -137,10 +138,19 @@ const Tours = ({
 								<Link className="has-text-white order-links">A-Z</Link>
 							</li>
 						</ul>
+						<div className="control">
+					        <div className="select">
+					          <select className="is-hovered">
+					            <option>Predeterminado</option>
+					            <option>Precio más bajoWith options</option>
+					            <option>A-Z</option>
+					          </select>
+					        </div>
+					    </div>
 					</div>
 					<div className="tours-container">
 						<div className="tour has-text-white">
-							<div className="relative tour-wrapper is-flex">
+							<div className="relative tour-wrapper is-flex-tablet">
 								<div className="tour-image"
 									style={{
 										backgroundImage: `url(${
@@ -194,7 +204,7 @@ const Tours = ({
 							</div>
 						</div>
 						<div className="tour has-text-white">
-							<div className="relative tour-wrapper is-flex">
+							<div className="relative tour-wrapper is-flex-tablet">
 								<div className="tour-image"
 									style={{
 										backgroundImage: `url(${
@@ -248,7 +258,7 @@ const Tours = ({
 							</div>
 						</div>
 						<div className="tour has-text-white">
-							<div className="relative tour-wrapper is-flex">
+							<div className="relative tour-wrapper is-flex-tablet">
 								<div className="tour-image"
 									style={{
 										backgroundImage: `url(${
@@ -302,7 +312,7 @@ const Tours = ({
 							</div>
 						</div>
 						<div className="tour has-text-white">
-							<div className="relative tour-wrapper is-flex">
+							<div className="relative tour-wrapper is-flex-tablet">
 								<div className="tour-image"
 									style={{
 										backgroundImage: `url(${

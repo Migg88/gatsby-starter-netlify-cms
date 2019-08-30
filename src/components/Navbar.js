@@ -96,7 +96,7 @@ const Navbar = class extends React.Component {
           </div>
         </nav>
         <nav
-          className="navbar hide-on-mobile"
+          className="navbar is-hidden-mobile"
           role="navigation"
           aria-label="main-navigation"
           style={{backgroundColor: 'white' }}

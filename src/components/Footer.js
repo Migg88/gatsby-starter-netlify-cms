@@ -18,10 +18,10 @@ const Footer = class extends React.Component {
             style={{ width: '14em' }}
           />
         </div>
-        <div className="content has-text-centereds has-text-white-ter">
-          <div className="container  has-text-white-ter">
+        <div className="has-text-centereds has-text-white-ter">
+          <div className="container is-fluid has-text-white-ter">
             <div className="columns" style={{borderBottom: 'solid 5px #443575', paddingBottom: '2rem', marginBottom: '5rem'}}>
-              <div className="column is-full">
+              <div className="column is-full-mobile">
                 <div className="columns">
                   <div className="column is-half">
                     <p>¿Quieres recibir ofertas exclusivas de los tours? !Suscribete a nuestro boletín de noticias!</p>
@@ -41,9 +41,9 @@ const Footer = class extends React.Component {
             </div>
             <div className="columns">
               <div className="column is-4">
-                <section className="menu">
+                <section className="menu has-text-centered-mobile">
                   <h3 className="title has-text-white">Contáctanos</h3>
-                  <ul className="menu-list">
+                  <ul className="menu-list has-text-centered-mobile">
                     <li>
                       <Link to="/" className="navbar-item has-text-white">
                         Home
@@ -78,9 +78,9 @@ const Footer = class extends React.Component {
                 </section>
               </div>
               <div className="column is-4">
-                <section>
+                <section className="has-text-centered-mobile">
                   <h3 className="title has-text-white">Enlaces rápidos</h3>
-                  <ul className="menu-list">
+                  <ul className="menu-list has-text-centered-mobile">
                     <li>
                       <Link className="navbar-item has-text-white" to="/blog">
                         Latest Stories
@@ -94,7 +94,7 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-4 social">
+              <div className="column is-4 social has-text-centered-mobile">
                 <h3 className="title has-text-white">Siguenos</h3>
                 <a title="facebook" href="https://facebook.com">
                   <img
