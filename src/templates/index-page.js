@@ -234,12 +234,13 @@ export const IndexPageTemplate = ({
            <span><i className="fas fa-route"></i></span>Nuestros Tours
           </h2>
           <div className="tour-type-container">
-            <div className="tour-type">
+            <div className="tour-type ">
               <Img className="tour-type-rounded" fluid={culturales.childImageSharp.fluid} />
-              <div className="overlay is-hidden-tablet">
-                <span className="icon is-medium">
-                  <i class="fas fa-gopuram"></i>
+              <div className="overlay is-hidden-tablet" style={{backgroundColor: `#422e6a`}}>
+                <span className="icon is-large">
+                  <i class="fas fa-3x fa-gopuram"></i>
                 </span>
+                <p>Tours Culturales</p>
               </div>
               <div className="content is-hidden-mobile">
                 <h3 className="title">Tours Culturales</h3>
@@ -255,6 +256,12 @@ export const IndexPageTemplate = ({
             </div>
             <div className="tour-type">
               <Img className="tour-type-rounded" fluid={acuaticos.childImageSharp.fluid} />
+              <div className="overlay is-hidden-tablet" style={{backgroundColor: `#eab92a`}}>
+                <span className="icon is-large">
+                  <i class="fas fa-3x fa-water"></i>
+                </span>
+                <p>Tours Acuaticos</p>
+              </div>
               <div className="content is-hidden-mobile">
                 <h3 className="title">Tours Acuaticos</h3>
                 <p className="description has-text-white">
@@ -269,6 +276,12 @@ export const IndexPageTemplate = ({
             </div>
             <div className="tour-type">
               <Img className="tour-type-rounded" fluid={vacacionales.childImageSharp.fluid} />
+              <div className="overlay is-hidden-tablet" style={{backgroundColor: `#4d1dad`}}>
+                <span className="icon is-large">
+                  <i class="fas fa-3x fa-map-marked-alt"></i>
+                </span>
+                <p>Tours Vacacionales</p>
+              </div>
               <div className="content is-hidden-mobile">
                 <h3 className="title">Tours Vacacionales</h3>
                 <p className="description has-text-white">

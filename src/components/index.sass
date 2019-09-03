@@ -8,6 +8,23 @@
 		height: 300px
 		position: relative
 		margin-bottom: 30px
+		overflow: hidden
+		.overlay
+			display: flex
+			flex-flow: column
+			justify-content: center
+			align-items: center
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			opacity: 0.7
+			.icon
+				color: #fff
+			p
+				font-size: 2rem
+				color: white
 		.content
 			width: calc(100% - 150px)
 			height: 100%
@@ -17,7 +34,7 @@
 			overflow: hidden
 			.title
 				padding: 20px 0 20px 150px
-				background-image: linear-gradient(to right, #eab92a, #fff )
+				background-color: #eab92a
 				color: #fff
 			.description 
 				padding-left: 170px
@@ -63,7 +80,6 @@
 .contact-info-container
 	background-color: #eab92a
 	padding: 1em
-	animation: bounce infinite
 	&:hover
 		animation: none
 	a
@@ -105,8 +121,8 @@
 	.tour-type-container
 		.tour-type
 			height: auto;
+			border-radius: 50%
 			.tour-type-rounded
 				width: 100%
 				height: calc(100vw - 1.50rem)
-				border-radius: 50%
 				position: relative !important
