@@ -20,31 +20,33 @@ const Tours = ({
 		    height: '400px'
 		  }}
 		>
-		  <div
-		    style={{
-		      display: 'flex',
-		      height: '150px',
-		      lineHeight: '1',
-		      justifyContent: 'space-around',
-		      alignItems: 'center',
-		      flexDirection: 'row',
-		    }}
-		  >
-		    <form className="searcher" style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between',}}>
-		      <input className="input is-large" type="text" placeholder="¿A dónde viajas?" />
-		      <div className="control">
-		        <div className="select is-large">
-		          <select className="is-hovered">
-		            <option>Tipo de tour</option>
-		            <option>With options</option>
-		          </select>
-		        </div>
-		      </div>
-		      <input className="input is-large" type="date" placeholder="Fecha" />
-		      <input className="button is-large" style={{backgroundColor: '#eab92a', color: '#fff'}} type="submit" value="Buscar" />
-		    </form>
+		  <div style={{backgroundColor: 'rgba(68, 53, 117, 0.9)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+			  <div
+			    style={{
+			      display: 'flex',
+			      height: '150px',
+			      lineHeight: '1',
+			      justifyContent: 'space-around',
+			      alignItems: 'center',
+			      flexDirection: 'row',
+			    }}
+			  >
+			    <form className="searcher" style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between',}}>
+			      <input className="input is-large" type="text" placeholder="¿A dónde viajas?" />
+			      <div className="control">
+			        <div className="select is-large">
+			          <select className="is-hovered">
+			            <option>Tipo de tour</option>
+			            <option>With options</option>
+			          </select>
+			        </div>
+			      </div>
+			      <input className="input is-large" type="date" placeholder="Fecha" />
+			      <input className="button is-large" style={{backgroundColor: '#eab92a', color: '#fff'}} type="submit" value="Buscar" />
+			    </form>
+			  </div>
 		  </div>
-		</div>
+	  </div>
 		<div className="container"
 			style={{
 				paddingTop: '50px',
@@ -54,7 +56,7 @@ const Tours = ({
 			}}
 		>
 			<div className="columns">
-				<div className="column is-hidden-mobile"
+				<div className="column is-one-fifth is-hidden-mobile"
 					style={{
 						paddingTop: '5rem',
 						paddingBottom: '5rem',
@@ -129,13 +131,13 @@ const Tours = ({
 						<p style={{marginRight: '10px'}}>Ordenar por:</p>
 						<ul className="is-flex is-hidden-mobile">
 							<li>
-								<Link className="has-text-white order-links">Predeterminado</Link>
+								<a className="has-text-white order-links">Predeterminado</a>
 							</li>
 							<li>
-								<Link className="has-text-white order-links">Precio más bajo</Link>
+								<a className="has-text-white order-links">Precio más bajo</a>
 							</li>
 							<li>
-								<Link className="has-text-white order-links">A-Z</Link>
+								<a className="has-text-white order-links">A-Z</a>
 							</li>
 						</ul>
 						<div className="control">
@@ -183,7 +185,7 @@ const Tours = ({
 						                    <span>
 						                      <i className="fas fa-shuttle-van"></i>
 						                    </span>
-						                    <span>
+						                    <span className="stars">
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
@@ -237,7 +239,7 @@ const Tours = ({
 						                    <span>
 						                      <i className="fas fa-shuttle-van"></i>
 						                    </span>
-						                    <span>
+						                    <span className="stars">
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
@@ -291,7 +293,7 @@ const Tours = ({
 						                    <span>
 						                      <i className="fas fa-shuttle-van"></i>
 						                    </span>
-						                    <span>
+						                    <span className="stars">
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
@@ -345,7 +347,7 @@ const Tours = ({
 						                    <span>
 						                      <i className="fas fa-shuttle-van"></i>
 						                    </span>
-						                    <span>
+						                    <span className="stars">
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
 						                      <i className="far fa-star"></i>
@@ -366,17 +368,17 @@ const Tours = ({
 							</div>
 						</div>
 					</div>
-					<nav class="pagination is-centered" role="navigation" aria-label="pagination">
-					  <a href="#" class="pagination-previous">Previous</a>
-					  <a href="#" class="pagination-next">Next page</a>
-					  <ul class="pagination-list">
-					    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-					    <li><span class="pagination-ellipsis">&hellip;</span></li>
-					    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
-					    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
-					    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
-					    <li><span class="pagination-ellipsis">&hellip;</span></li>
-					    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+					<nav className="pagination is-centered" role="navigation" aria-label="pagination">
+					  <a href="#" className="pagination-previous">Previous</a>
+					  <a href="#" className="pagination-next">Next page</a>
+					  <ul className="pagination-list">
+					    <li><a className="pagination-link" aria-label="Goto page 1">1</a></li>
+					    <li><span className="pagination-ellipsis">&hellip;</span></li>
+					    <li><a className="pagination-link" aria-label="Goto page 45">45</a></li>
+					    <li><a className="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+					    <li><a className="pagination-link" aria-label="Goto page 47">47</a></li>
+					    <li><span className="pagination-ellipsis">&hellip;</span></li>
+					    <li><a className="pagination-link" aria-label="Goto page 86">86</a></li>
 					  </ul>
 					</nav>
 				</div>
@@ -399,7 +401,7 @@ export default class ToursPage extends React.Component {
 
 export const pageQuery = graphql`
   query {
-    toursBack: file(relativePath: { eq: "tours-background.jpg" }){
+    toursBack: file(relativePath: { eq: "tours-cover.jpg" }){
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
