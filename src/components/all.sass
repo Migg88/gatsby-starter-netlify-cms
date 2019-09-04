@@ -28,7 +28,10 @@ $capptour-yellow: #eab92a
 .relative
   position: relative !important
 
-.searcher input, .searcher select
+.full-width
+  width: 100%
+
+input, select, textarea
   &:not(.button)
     border-left: 8px solid #f1df0d !important
 
@@ -287,6 +290,66 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
+//tour-page
+
+.tour-page-description
+  padding: 2rem
+  background-color: #e5e4e4
+  border-radius: 20px
+
+.nav-pills .nav-link
+  background-color: $cap-purple
+  color: #fff
+
+.nav-pills .nav-link.active
+  background-color: $capptour-yellow !important
+
+.tab-content
+  padding: 2rem
+  background-color: #e5e4e4
+  border-radius: 0 0 20px 20px
+  color: #504e4e
+  font-weight: 500
+
+.terms
+  margin-top: 100px
+  padding: 1rem
+  background-color: #443575
+  color: #fff 
+  border-radius: 20px
+  h3.title
+    font-size: 1.6rem
+    color: #fff
+    text-transform: uppercase;
+  h4.title
+    font-size: 22px;
+    color: #eab92a;
+  p
+    &:not(:last-child)
+      margin-bottom: 1.5rem
+
+.related-tour-column
+  &:not(:last-child)
+    margin-bottom: 4rem
+  .related
+    .related-tour-image
+      border-radius: 20px
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      height: 180px
+    .related-tour-title
+      font-size: 26px
+      color: #462a6c
+    .related-tour-price
+      color: #504e4e
+      font-weight: 700
+      span
+        margin-right: .5em
+        font-weight: 400
+    .stars
+      color: $capptour-yellow
+
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
@@ -294,6 +357,8 @@ $menu-label-color: $white-ter
 
 +mobile
 
+  .tour-page-description-title
+    font-size: 1.5rem
   .brand-nav
     height: auto;
   .blog-list-item header
