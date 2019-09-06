@@ -19,10 +19,10 @@ const TourComponent = ({data}) => {
 	const tulum = data.tulum
 	const snorkel = data.snorkel
 	const vacacionales = data.vacacionales
-
+ 
 	return(
 		<Layout>
-			<section style={{margin: '50px 0'}}>
+			<section>
 				<div className="container"
 					style={{
 						padding: '3rem',
@@ -85,15 +85,15 @@ const TourComponent = ({data}) => {
 								</div>
 							</div>
 
-							<ul style={{marginTop: '20px'}} className="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+							<ul style={{marginTop: '20px'}} className="nav nav-pills nav-fill info" id="pills-tab" role="tablist">
 							  <li className="nav-item">
-							    <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">¿Qué incluye?</a>
+							    <a className="nav-link flex-sm-fill active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">¿Qué incluye?</a>
 							  </li>
 							  <li className="nav-item">
-							    <a className="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Recomendaciones</a>
+							    <a className="nav-link flex-sm-fill" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Recomendaciones</a>
 							  </li>
 							  <li className="nav-item">
-							    <a className="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">información importante</a>
+							    <a className="nav-link flex-sm-fill" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">información importante</a>
 							  </li>
 							</ul>
 
